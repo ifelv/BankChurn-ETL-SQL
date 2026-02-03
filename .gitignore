@@ -1,0 +1,16 @@
+# --- Python ---
+__pycache__/
+*.pyc
+
+# --- Data Files (Too large for Git) ---
+*.csv
+*.json
+
+# --- System Files ---
+.DS_Store
+Thumbs.db
+
+# --- IDE Settings (Just in case) ---
+.idea/
+.vscode/
+venv/
