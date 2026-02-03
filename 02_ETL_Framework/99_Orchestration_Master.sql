@@ -45,6 +45,9 @@ BEGIN
     EXEC ETL.usp_Load_Bank_NaiveBayesScore
         @RunID = @RunID;
 
+    EXEC Operations.usp_GenerateChurnAlerts
+        @RunID = @RunID;
+
     EXEC ETLLog.usp_FinalizeRun
         @RunID = @RunID;
 END;
