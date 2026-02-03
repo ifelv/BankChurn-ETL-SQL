@@ -27,7 +27,7 @@ The repository is organized into the logical flow of the engineering pipeline:
 | **`01_Schema_Setup`** | Database creation, Schema definitions (`ETLLog`, `Staging`, `ETL`, `Person`, `Bank`, `Operations`), Table creation with constraints, and Security Roles. |
 | **`02_ETL_Framework`** | Stored Procedures for data loading, the Master Orchestration script, and the custom ETL Logging architecture. |
 | **`03_Analysis_Reporting`** | Views for demographics, financial behavior analysis, high-risk churn segmentation, and reporting queries. |
-| **`04_Source_Scripts`** | Python script (`convert_csv_to_json_bank_churners.py`) for pre-processing raw CSV data into JSON format for SQL ingestion. |
+| **`04_Source_Scripts`** | Python script (`converter.py`) for pre-processing raw CSV data into JSON format for SQL ingestion. |
 
 ## ⚙️ Key Technical Features
 
@@ -38,7 +38,7 @@ The repository is organized into the logical flow of the engineering pipeline:
 
 ### 2. Advanced SQL Implementation
 * **Merge Statements:** Efficiently handles `UPSERT` operations (Update existing records, Insert new ones).
-* **Triggers & Automation:** Automated alerts for high-risk behavior via database triggers.
+* **Business Logic** | Stored Procedures to detect high-risk churners and log operational alerts.
 * **Window Functions:** Utilized for pagination, quartiles (NTILE), and ranking customers by value.
 
 ### 3. Security & Governance
