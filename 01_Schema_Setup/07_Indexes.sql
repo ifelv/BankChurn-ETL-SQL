@@ -11,13 +11,8 @@ ON Person.Gender(Gender_Desc);
 CREATE NONCLUSTERED INDEX IX_Education_Level 
 ON Person.EducationLevel(Education_Level);
 
-CREATE NONCLUSTERED INDEX IX_Education_Level 
+CREATE NONCLUSTERED INDEX IX_Marital_Status 
 ON Person.MaritalStatus(Marital_Status);
-
-EXEC sp_rename 
-    'Person.MaritalStatus.IX_Education_Level',
-    'IX_Marital_Status',
-    'INDEX';
 
 CREATE NONCLUSTERED INDEX IX_CardCategory_Type 
 ON Bank.CardCategory(Card_Type);
